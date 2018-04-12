@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Access_10M.Resources.Dictionary"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <sys:String x:Key="title">Access_10M_v.alpha.6</sys:String>
+
+    <sys:String x:Key="tooltip_i_ico">ARNOULD Alexis, MAUCOTEL Benoit</sys:String>
+    <sys:String x:Key="tooltip_b_search">Rechercher</sys:String>
+
+    <sys:String x:Key="text_tb_prenom">Prénom :</sys:String>
+    <sys:String x:Key="text_tb_nom">Nom :</sys:String>
+    <sys:String x:Key="text_tb_sexe">Sexe :</sys:String>
+    <sys:String x:Key="text_tb_datenais">Date de naissance :</sys:String>
+    <sys:String x:Key="text_tb_sexeH">H</sys:String>
+    <sys:String x:Key="text_tb_sexeF">F</sys:String>
+
+    <sys:String x:Key="text_similar">Ressemblance</sys:String>
+    <sys:String x:Key="text_nombre">Nombre</sys:String>
+
+    <sys:String x:Key="text_tb_settings">Paramètres</sys:String>
+
+    <sys:String x:Key="text_tb_host">Host :</sys:String>
+    <sys:String x:Key="text_tb_db">Base de Données :</sys:String>
+    <sys:String x:Key="text_tb_user">Login :</sys:String>
+    <sys:String x:Key="text_tb_pw">Mot de passe :</sys:String>
+    <sys:String x:Key="text_tb_table">Nom de la Table :</sys:String>
+</ResourceDictionary>
