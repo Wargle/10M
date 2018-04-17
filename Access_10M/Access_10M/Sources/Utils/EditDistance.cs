@@ -6,13 +6,29 @@ using System.Threading.Tasks;
 
 namespace Access_10M.Sources.Utils
 {
+    /// <summary>
+    /// Classe encapsulant le calcul d'une distance d'édition entre deux chaines de caractères.
+    /// </summary>
     public class EditDistance
     {
+        /// <summary>
+        /// Calcul la distance d'édition de deux chaines de caractères.
+        /// </summary>
+        /// <param name="original">La première chaine</param>
+        /// <param name="test">La deuxième chaine</param>
+        /// <returns>La distance d'édition</returns>
         public static int CalculEditDistance(string original, string test)
         {
             return RecursifMemoization(original, test, new Cache());
         }
 
+        /// <summary>
+        /// Calcul la distance d'édition de deux chaines de caractères avec la technique de la mémoization.
+        /// </summary>
+        /// <param name="o">La première chaine</param>
+        /// <param name="t">La deucième chaine</param>
+        /// <param name="cache">Un objet qui stocke les valeurs déjà calculées</param>
+        /// <returns>La distance d'édition</returns>
         private static int RecursifMemoization(string o, string t, Cache cache)
         {
             int leno = o.Length;
@@ -61,6 +77,9 @@ namespace Access_10M.Sources.Utils
             return d;
         }
 
+        /// <summary>
+        /// Un objet non accessible en dehors et qui stocke des valeurs.
+        /// </summary>
         private class Cache
         {
             private Dictionary<string, Dictionary<string, int>> map;

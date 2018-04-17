@@ -9,8 +9,14 @@ using System.Windows;
 
 namespace Access_10M.Sources.Metier
 {
+    /// <summary>
+    /// Classe qui englobe l'accès à une base de données.
+    /// </summary>
     public class DAO
     {
+        /// <summary>
+        /// Classe qui stocke l'objet BDD en Singleton.
+        /// </summary>
         public class DataBase
         {
             private static MySqlConnection connection;
@@ -39,6 +45,10 @@ namespace Access_10M.Sources.Metier
             }
         }
 
+        /// <summary>
+        /// Renvoi une instance ouverte de la BDD
+        /// </summary>
+        /// <returns></returns>
         public static MySqlConnection InitConnection()
         {
             try
@@ -55,9 +65,11 @@ namespace Access_10M.Sources.Metier
             }
         }
 
-        /**
-         *  Permet d'ajouter les valeurs de la requête dans la Commande Sql 
-         */
+        /// <summary>
+        /// Permet d'ajouter les valeurs de la requête dans la Commande Sql
+        /// </summary>
+        /// <param name="cmd">L'objet MySqlCommand</param>
+        /// <param name="vals">Toutes les valeurs</param>        
         private static void InitValues(MySqlCommand cmd, Dictionary<string, object> vals)
         {
             if (vals != null)
@@ -69,9 +81,10 @@ namespace Access_10M.Sources.Metier
             }
         }
 
-        /**
-         * Permet d'écrire des données dans la BDD
-         */
+        /// <summary>
+        /// Permet d'écrire des données dans la BDD
+        /// </summary>
+        /// <param name="query">Un objet MyQuery</param>
         public static void Execute(MyQuery query)
         {
             try
@@ -93,9 +106,11 @@ namespace Access_10M.Sources.Metier
             }
         }
 
-        /**
-         * Permet d'écrire des données dans la BDD et de retouner des valeurs
-         */
+        /// <summary>
+        /// Permet d'écrire des données dans la BDD et de retouner des valeurs
+        /// </summary>
+        /// <param name="query">Un objet MyQuery</param>
+        /// <returns>La valeur de la requête</returns>
         public static object ExecuteWithRet(MyQuery query)
         {
             try
@@ -116,10 +131,11 @@ namespace Access_10M.Sources.Metier
                 throw new MyException("Error:: Command ExecuteScalar on DataBase", e.Source + "\n" + e.Message);
             }
         }
-
-        /**
-         * Permet de lire des données situées dans la BDD
-         */
+        
+        /// <summary>
+        /// Permet de lire des données situées dans la BDD
+        /// </summary>
+        /// <param name="query">Un objet MyQuery</param>
         public static MySqlDataReader Read(MyQuery query)
         {
             try
@@ -143,9 +159,9 @@ namespace Access_10M.Sources.Metier
             }
         }
 
-        /**
-         * Permet de fermer la connexion à la BDD en cas de problème
-         */
+        /// <summary>
+        /// Permet de fermer la connexion à la BDD en cas de problème
+        /// </summary>
         public static void ForceClose()
         {
             try

@@ -8,6 +8,9 @@ using System.Windows.Media.Animation;
 
 namespace Access_10M.Sources.Vue_Model
 {
+    /// <summary>
+    /// Classe qui permet d'englober l'utilisation de StoryBoard dans des vues.
+    /// </summary>
     public class AnimationControl
     {
         private bool isExe;
@@ -21,6 +24,12 @@ namespace Access_10M.Sources.Vue_Model
             this.isExe = isShow;
         }
 
+        /// <summary>
+        /// Ajoute une Animation à executer.
+        /// </summary>
+        /// <param name="target">Le Control ciblé par l'animation</param>
+        /// <param name="show">Le StoryBoard d'éxécution</param>
+        /// <param name="hide">Le StoryBoard d'inversement</param>
         public void AddAnimation(FrameworkElement target, Storyboard show, Storyboard hide)
         {
             if (target == null || show == null || hide == null)
@@ -33,6 +42,9 @@ namespace Access_10M.Sources.Vue_Model
             Count++;
         }
 
+        /// <summary>
+        /// Execute toutes les animations ajoutées.
+        /// </summary>
         public void Execute()
         {
             for (int i = 0; i < Count; i++)
@@ -41,6 +53,9 @@ namespace Access_10M.Sources.Vue_Model
             isExe = true;
         }
 
+        /// <summary>
+        /// Inverse toutes les animations ajoutées.
+        /// </summary>
         public void Back()
         {
             for (int i = 0; i < Count; i++)

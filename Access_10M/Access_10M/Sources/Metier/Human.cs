@@ -3,6 +3,9 @@ using System;
 
 namespace Access_10M.Sources.Metier
 {
+    /// <summary>
+    /// Classe Model qui stocke les valeurs d'un Human.
+    /// </summary>
     public class Human
     {
         private int id;

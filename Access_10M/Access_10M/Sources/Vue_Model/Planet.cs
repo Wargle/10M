@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace Access_10M.Sources.Vue_Model
 {
+    /// <summary>
+    /// La classe qui contient la liste des HumanVm générer par la recherche en BDD.
+    /// </summary>
     public class Planet
     {
         private ObservableCollection<HumanVm> cancer;
@@ -21,6 +24,11 @@ namespace Access_10M.Sources.Vue_Model
 
         public ObservableCollection<HumanVm> GetHumans() { return cancer; }
 
+        /// <summary>
+        /// Fait l'appel à la DAO pour effectuer une recherche et mettre à jour la liste.
+        /// </summary>
+        /// <param name="query">La requête pour la BDD</param>
+        /// <param name="humanRef">L'HumanVm de comparaison pour déterminer la ressemblance</param>
         public void SearchHuman(MyQuery query, HumanVm humanRef)
         {
             cancer.ClearByThread();

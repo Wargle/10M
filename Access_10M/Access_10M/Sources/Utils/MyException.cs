@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Access_10M.Sources.Utils
 {
+    /// <summary>
+    /// Classe Exception permettant de stocker un titre à notre exception.
+    /// </summary>
     public class MyException : Exception
     {
         private string title;

@@ -21,3 +21,26 @@ C:\Users\Eleme\Desktop\Bazar\10M\Access_10M\Access_10M\obj\Debug\Resources\Dicti
 C:\Users\Eleme\Desktop\Bazar\10M\Access_10M\Access_10M\obj\Debug\Resources\Dictionary\StringsDictionary.baml
 C:\Users\Eleme\Desktop\Bazar\10M\Access_10M\Access_10M\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Eleme\Desktop\Bazar\10M\Access_10M\Access_10M\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\bin\Debug\Access_10M.exe.config
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\bin\Debug\Access_10M.exe
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\bin\Debug\Access_10M.pdb
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\bin\Debug\MySql.Data.dll
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\bin\Debug\MySql.Data.xml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M.csprojResolveAssemblyReference.cache
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Sources\Vue\wMain.g.cs
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\App.g.cs
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M_MarkupCompile.cache
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M_MarkupCompile.lref
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\App.baml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Resources\Dictionary\ParamsDictionary.baml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Resources\Dictionary\StylesDictionary.baml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Resources\Dictionary\StringsDictionary.baml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Sources\Vue\wMain.baml
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M.g.resources
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M.Properties.Resources.resources
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M.csproj.GenerateResource.Cache
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M.csproj.CoreCompileInputs.cache
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M.exe
+C:\Users\Eleme\Desktop\Projet 10M\10M\Access_10M\Access_10M\obj\Debug\Access_10M.pdb

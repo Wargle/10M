@@ -3,10 +3,12 @@ using Access_10M.Sources.Utils;
 using Access_10M.Sources.Vue_Model;
 using System;
 using System.ComponentModel;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
+using System.Windows.Threading;
 
 namespace Access_10M.Sources.Vue
 {
@@ -23,6 +25,8 @@ namespace Access_10M.Sources.Vue
         private MyException exception;
         private string command;
 
+        public static Thread easter;
+
         public wMain()
         {
             planet = new Planet();
@@ -37,6 +41,11 @@ namespace Access_10M.Sources.Vue
             animSettings.AddAnimation(gridSettings, Resources["showSettings"] as Storyboard, Resources["hideSettings"] as Storyboard);
         }
 
+        /// <summary>
+        /// Permet d'afficher un message en bannière.
+        /// </summary>
+        /// <param name="title">Le titre</param>
+        /// <param name="mess">Le contenu du message</param>
         public void ShowInfo(string title, string mess)
         {
             if (!animInfo.IsExecuted)
@@ -68,6 +77,12 @@ namespace Access_10M.Sources.Vue
             ((TextBox)sender).Text = ((TextBox)sender).Text.ToUpper();
         }
 
+        /// <summary>
+        /// Retourne le Text d'une TextBox s'il valide un patterne.
+        /// </summary>
+        /// <param name="tb">Le Control (TextBox)</param>
+        /// <param name="pattern">Le patterne à vérifier</param>
+        /// <returns>La valeur ou une MyException</returns>
         private string TextBoxGetText(TextBox tb, string pattern)
         {
             if(MyRegex.IsMatch(pattern, tb.Text))
@@ -114,6 +129,11 @@ namespace Access_10M.Sources.Vue
             return val;
         }
 
+        /// <summary>
+        /// Transforme un mot sous un format permetant de détecter les fautes de frappes.
+        /// </summary>
+        /// <param name="word">Le mot</param>
+        /// <returns>La transformation</returns>
         private string TransformWordToRequest(string word)
         {
             string req = "^(";
@@ -180,6 +200,30 @@ namespace Access_10M.Sources.Vue
             Application.Current.Resources["password"] = tbPw.Password;
             Application.Current.Resources["db_table"] = tbTable.Text;
             DAO.ForceClose();
+        }
+
+        private void KeyUp_EasterEgg(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            if (tbPrenom.Text.Equals("ROUGE") && tbNom.Text.Equals("VERT") && tbDatenais.Text.ToUpper().Equals("BLEU"))
+            {
+                if (easter != null)
+                    easter.Abort();
+                easter = new Thread(() => {
+                    while (true)
+                    {
+                        Random r = new Random();
+                        Application.Current.Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() =>
+                        {
+                            gridFilter.Background = new SolidColorBrush(
+                                Color.FromRgb(Convert.ToByte(r.Next(255)), Convert.ToByte(r.Next(255)), Convert.ToByte(r.Next(255))));
+                        }));
+                        Thread.Sleep(100);
+                    }
+                });
+                easter.Start();
+            }
+            if (tbPrenom.Text.Equals("STOP") && tbNom.Text.Equals("THIS") && tbDatenais.Text.ToUpper().Equals("PLEASE"))
+                easter.Abort();
         }
 
         private void MouseLeftDown_Logo(object sender, System.Windows.Input.MouseButtonEventArgs e)

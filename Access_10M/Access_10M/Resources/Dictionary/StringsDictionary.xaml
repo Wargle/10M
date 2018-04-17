@@ -3,7 +3,7 @@
                     xmlns:local="clr-namespace:Access_10M.Resources.Dictionary"
                     xmlns:sys="clr-namespace:System;assembly=mscorlib">
 
-    <sys:String x:Key="title">Access_10M_v.alpha.6</sys:String>
+    <sys:String x:Key="title">Access_10M_v.alpha.9</sys:String>
 
     <sys:String x:Key="tooltip_i_ico">ARNOULD Alexis, MAUCOTEL Benoit</sys:String>
     <sys:String x:Key="tooltip_b_search">Rechercher</sys:String>

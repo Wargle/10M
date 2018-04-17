@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Access_10M.Sources.Vue;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -16,16 +17,23 @@ namespace Access_10M
     {
         protected override void OnStartup(StartupEventArgs e)
         {
-            StreamReader file = new StreamReader(@"..\..\Resources\params.json");
-            string line = file.ReadLine();
-            Dictionary<object, object> parameters = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<object, object>>(line);
-
-            foreach (KeyValuePair<object, object> param in parameters)
+            try
             {
-                Current.Resources[param.Key] = param.Value;
-            }
+                StreamReader file = new StreamReader(@"..\..\Resources\params.json");
+                string line = file.ReadLine();
+                Dictionary<object, object> parameters = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<object, object>>(line);
 
-            file.Close();
+                foreach (KeyValuePair<object, object> param in parameters)
+                {
+                    Current.Resources[param.Key] = param.Value;
+                }
+
+                file.Close();
+            }
+            catch(Exception ex)
+            {
+                
+            }
 
             base.OnStartup(e);
         }
@@ -44,6 +52,9 @@ namespace Access_10M
                 StreamWriter file = new StreamWriter(@"..\..\Resources\params.json");
                 file.Write(Newtonsoft.Json.JsonConvert.SerializeObject(parameters));
                 file.Close();
+
+                if (wMain.easter != null)
+                    wMain.easter.Abort();
             }
             catch (Exception ex)
             {

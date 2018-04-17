@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace Access_10M.Sources.Vue_Model
 {
+    /// <summary>
+    /// La classe HumanVm fait le lien entre la Vue et le Model Human.
+    /// Elle contient les divers champs à afficher avec leur coloration.
+    /// </summary>
     public class HumanVm
     {
         private event PropertyChangedEventHandler PropertyChanged;
@@ -43,6 +47,11 @@ namespace Access_10M.Sources.Vue_Model
             };
         }
 
+        /// <summary>
+        /// Permet de calculer la ressemblance par rapport à l'objet de référence.
+        /// Met à jour le pourcentage de ressemblance et les couleurs de champs à afficher.
+        /// </summary>
+        /// <param name="hRef">L'Human de référence</param>
         public void SimilarityCalcul(Human hRef)
         {
             int dist = EditDistance.CalculEditDistance(model.Nom, hRef.Nom);

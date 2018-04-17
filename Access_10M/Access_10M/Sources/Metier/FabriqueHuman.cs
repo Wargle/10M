@@ -7,8 +7,16 @@ using System.Threading.Tasks;
 
 namespace Access_10M.Sources.Metier
 {
+    /// <summary>
+    /// La classe qui s'occupe de l'instanciation d'objet Human.
+    /// </summary>
     public class FabriqueHuman
     {
+        /// <summary>
+        /// Instancie un Human à partir d'un MySqlDataReadert.
+        /// </summary>
+        /// <param name="reader">Le résultat de la requête BDD</param>
+        /// <returns></returns>
         public static Human FabriqueHumanFromSQL(MySqlDataReader reader)
         {
             Human h = new Human(
